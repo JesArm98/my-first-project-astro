@@ -1,11 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Card from "../components/Card.astro";
+import HelloComponent from "../components/HelloComponent.jsx";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Document</title>
+  </head>
+  <body>
+    <Card
+      title="Hola mundo"
+      text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse officia illum sit quas distinctio quidem minima quisquam deleniti? Nam unde maiores dolores pariatur nihil praesentium, omnis deserunt quasi quod qui?"
+    />
+    <HelloComponent client:load />
+  </body>
+</html>
